@@ -1,0 +1,7 @@
+<h1>Sushi Saga Menu</h1>
+
+<ul>
+  <% @sushis.all.each do |sushi| %>
+    <li><a href=<%= "/sushis/#{sushi.id}" %>><%= "#{sushi.name} - $#{sushi.price}"%></a></li>
+  <% end %>
+</ul>

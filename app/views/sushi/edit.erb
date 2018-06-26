@@ -1,0 +1,22 @@
+<form method="POST" action=<%="/sushis/#{@sushi.id}"%>>
+  <input type="hidden" name="_method" value="PATCH" />
+
+  <label for="name">Name: </label>
+  <input type="text" name="name" value="<%= @sushi.name%>">
+
+  <label for="description">Description: </label>
+  <textarea name="description" ><%=@sushi.description%></textarea>
+
+  <label for="price">Price: </label>
+  <input type="number" name="price" value="<%=@sushi.price%>">
+
+  <input type="submit" value="Change that sushi!">
+</form>
+
+
+<form action="/sushis/<%= @sushi.id %>" method="post">
+  <input type="hidden" name="_method" value="delete" />
+  <input id="mysubmit" type="submit" value="Ew gross!" />
+</form>
+
+<span><a href=<%="/sushis/#{@sushi.id}"%>> Nevermind! </a></span>
